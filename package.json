@@ -1,0 +1,20 @@
+{
+    "name": "aibots-plugin",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "node tools/dev.mjs dev",
+        "build": "node tools/dev.mjs build",
+        "check": "node tools/dev.mjs check",
+        "package": "node tools/dev.mjs package",
+        "test": "node tools/dev.mjs test",
+        "make": "node tools/make.mjs",
+        "clean-sample": "node tools/clean-sample.mjs",
+        "ai": "node tools/ai.mjs install",
+        "ai:update": "node tools/ai.mjs update",
+        "ai:rule": "node tools/ai.mjs rule",
+        "mcp:inspect": "node tools/mcp-inspect.mjs"
+    },
+    "devDependencies": {}
+}

@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      TurboBin: ${{ github.workspace }}/turbo-cloud/Turbo.Main/bin/Debug/net10.0
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: plugin
+      - name: Check out the matching Turbo APIs
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.TURBO_CLOUD_REPOSITORY || 'nitrodevco/turbo-cloud' }}
+          ref: ${{ vars.TURBO_CLOUD_REF || 'main' }}
+          path: turbo-cloud
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: plugin/global.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the Turbo SDK
+        run: dotnet build turbo-cloud/Turbo.Main/Turbo.Main.csproj -nologo -v q
+      - name: Check plugin sources
+        working-directory: plugin
+        run: npm run check
+      - name: Test
+        working-directory: plugin
+        run: npm test
