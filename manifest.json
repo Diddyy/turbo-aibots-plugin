@@ -1,0 +1,12 @@
+{
+    "Name": "AI bots",
+    "Key": "aibots",
+    "Version": "0.1.0",
+    "Author": "Turbo",
+    "Dependencies": [],
+    "ApiVersion": 1,
+    "TablePrefix": "aibots_",
+    "ai": {
+        "purpose": "Room bots that answer players who talk to them, in the persona their room's owner gave them: they walk, talk and gesture in their room, look up catalog furni and the room's furni, and ask staff before giving a badge."
+    }
+}

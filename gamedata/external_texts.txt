@@ -1,0 +1,8 @@
+# The plugin's words: the hotel gets them as the plugin loads, and staff can change them in the panel.
+# What an AI bot says when it can't answer (AiResponse.Stop): never silence, never the reason's details.
+aibots.fallback.daily=I've talked so much today! Let's chat again tomorrow.
+aibots.fallback.busy=One at a time, please! Ask me again in a moment.
+aibots.fallback.waiting=I've asked the staff about that. I'll tell you when they answer.
+aibots.fallback.unavailable=I'm resting right now. Try me again later.
+aibots.fallback.lost=Sorry, I lost my train of thought. Can you ask me again?
+aibots.fallback.refused=I can't talk about that. Let's talk about something else!
